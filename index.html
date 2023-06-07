@@ -133,15 +133,18 @@
                 get(child(dbref, "Peoples/" + finduser.value))
                 .then((snapshot) => {
                     if (snapshot.exist()) {
-                        getToken.innerHTML = snapshot.val().Total_tokens;
+                        console.log("debug")
+                        getToken.innerHTML = snapshot.val().Totaltokens;
                     } else {
                         alert("No data found");
                     }
                 })
                 .catch((error) =>{
                     alert(error)
-                });
+                })
             }
+            fulldetailsBtn.addEventListener('click', GetToken);
+
           </script>
     </body>
 </html>
