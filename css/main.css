@@ -21,7 +21,7 @@ body {
 }
 .v1_4 {
   width: 315px;
-  height: 415px;
+  height: 550px;
   background: rgba(242, 231, 231, 1);
   opacity: 1;
   position: absolute;
@@ -34,7 +34,7 @@ body {
 }
 .v1_6 {
   width: 287px;
-  height: 414px;
+  height: 550px;
   background: url("../images/v1_6.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -118,7 +118,7 @@ body {
   left: 702px;
   font-family: Plus Jakarta Sans;
   font-weight: ExtraBold;
-  font-size: 14px;
+  font-size: 12px;
   opacity: 1;
   text-align: left;
 }
@@ -214,6 +214,58 @@ body {
   top: 561px;
   left: 650px;
   overflow: hidden;
+}
+
+.v1_20 {
+  width: 125px;
+  color: rgba(104, 124, 99, 1);
+  position: absolute;
+  top: 630px;
+  left: 720px;
+  font-family: Gotham Black;
+  font-weight: Regular;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v3_25 {
+  width: 200px;
+  color: rgba(0, 0, 0, 0.33000001311302185);
+  position: absolute;
+  top: 660px;
+  left: 702px;
+  font-family: Plus Jakarta Sans;
+  font-weight: Medium;
+  font-size: 12px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v1_21 {
+  width: 125px;
+  color: rgba(104, 124, 99, 1);
+  position: absolute;
+  top: 725px;
+  left: 800px;
+  font-family: Gotham Black;
+  font-weight: Regular;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v1_22 {
+  width: 125px;
+  color: rgba(104, 124, 99, 1);
+  position: absolute;
+  top: 725px;
+  left: 695px;
+  font-family: Gotham Black;
+  font-weight: Regular;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
 }
 .name {
   color: #fff;
