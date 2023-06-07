@@ -228,6 +228,33 @@ body {
   opacity: 1;
   text-align: left;
 }
+
+.v1_22 {
+  width: 125px;
+  color: rgba(104, 124, 99, 1);
+  position: absolute;
+  top: 630px;
+  left: 720px;
+  font-family: Gotham Black;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v1_21 {
+  width: 125px;
+  color: rgba(104, 124, 99, 1);
+  position: absolute;
+  top: 630px;
+  left: 720px;
+  font-family: Gotham Black;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
 .v3_16 {
   width: 70px;
   color: rgba(0, 0, 0, 0.33000001311302185);
