@@ -30,7 +30,7 @@
             </div>
             <!-- <div class="v3_21"></div> -->
             <div class="py-3">
-                <button type="submit" class= "p-3">Sign in</button>
+                <button type="submit" id="signin">Sign in</button>
             </div></div>
             <div class="name"></div>
         </div>
@@ -55,6 +55,31 @@
           
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
+
+            import {getDatabase, set, get, update, remove, ref, child}
+            from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"
+
+            const db = getDatabase();
+
+            var username = document.querySelector("#username");
+            var password = document.querySelector("#password");
+
+            var signinBtn = document.querySelector("#signin"); 
+
+            function Signin() {
+                set(ref(db,"People/" + username.value),{
+                    Username: username.value,
+                    Password: password.value
+                })
+                .then(()=>{
+                    alert("Data added successfully!!")
+                })
+                .catch((error)=>{
+                    alert(error)
+                });
+            }
+
+            signinBtn.addEventListener('click',Signin);
           </script>
     </body>
 </html>
