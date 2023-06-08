@@ -2,7 +2,7 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Gotham+Black&display=swap" rel="stylesheet" />
+        <!-- <link href="https://fonts.googleapis.com/css?family=Gotham+Black&display=swap" rel="stylesheet" /> -->
         <link href="./css/index.css" rel="stylesheet" />
         <title>Document</title>
     </head>
@@ -93,7 +93,7 @@
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
 
-            import {getDatabase, set, get, update, remove, on, ref, child}
+            import {getDatabase, set, get, update, remove, ref, on, child}
             from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"
 
             const db = getDatabase();
@@ -130,13 +130,14 @@
 
             function GetDetails() {
                 username = document.getElementById("username").value;
-                firebase.databasse().ref("Peoples/" + username).on('value', function(snapshot){
-                    snapshot.forEach(function(get_allDetails){
-                        user_data = get_allDetails.val();
-                        people = get_allDetails.key;
-                    })
-                })
+                var allDetails = firebase.database().ref("Peoples/" + username);
+                allDetails.on('value', (snapshot) => {
+                    const data = snapshot.val();
+                    // updateDetails(postElement, data);
+            });
             }
+
+            fulldetailsBtn.addEventListener('click',GetDetails);
 
           </script>
     </body>
