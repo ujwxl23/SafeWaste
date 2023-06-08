@@ -68,7 +68,7 @@
             </div></div>
             <br>
             <div class="v1_22">Your Token = </div>
-            <div class="v1_21" id="getToken"></div>
+            <div class="v1_23" id="getToken"></div>
             <div class="name"></div>
         </div>
         <script type="module">
@@ -93,7 +93,7 @@
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
 
-            import {getDatabase, set, get, update, remove, ref, child}
+            import {getDatabase, set, get, update, remove, on, ref, child}
             from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"
 
             const db = getDatabase();
@@ -128,23 +128,15 @@
 
             signinBtn.addEventListener('click',Signin);
 
-            function GetToken() {
-                const dbref = ref(db);
-
-                get(child(dbref, "Peoples/" + finduser.value))
-                .then((snapshot) => {
-                    if (snapshot.exist()) {
-                        console.log("debug")
-                        getToken.innerHTML = snapshot.val().Totaltokens;
-                    } else {
-                        alert("No data found");
-                    }
-                })
-                .catch((error) =>{
-                    alert(error)
+            function GetDetails() {
+                username = document.getElementById("username").value;
+                firebase.databasse().ref("Peoples/" + username).on('value', function(snapshot){
+                    snapshot.forEach(function(get_allDetails){
+                        user_data = get_allDetails.val();
+                        people = get_allDetails.key;
+                    })
                 })
             }
-            fulldetailsBtn.addEventListener('click', GetToken);
 
           </script>
     </body>
